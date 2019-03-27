@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
 # 数据容器 container
 # 包括字符串 string、 range()生成的等差数列、列表List、元组Tuple、集合Set、字典Dictionary。
 # 其中分为可变容器与不可变容器

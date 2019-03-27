@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
 import sys
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = 'all'
