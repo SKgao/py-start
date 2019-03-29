@@ -289,3 +289,25 @@ print(o)
 # popitem(), 随机返回并删除字典中的一对键和值(一般删除末尾对)
 o.popitem()
 print(o)
+
+# 迭代
+# 迭代的同时获取索引 enumerate()
+s = 'python!'
+for i, n in enumerate(s):
+    print(i, n)
+
+l = ['ann', 'bob', 'joe', 'john', 'mike']
+for j, e in enumerate(l):
+    print(j, e, l[j])
+
+# 迭代前排序
+t = ('bob', 'ann', 'john', 'mike', 'joe')
+for m, n in enumerate(sorted(t)):
+    print(m, n, t[m])
+for m, n in enumerate(reversed(t)):
+    print(m, n, t[m])
+
+# 迭代字典中的元素
+phonebook = {'ann':6575, 'bob':8982, 'joe':2598, 'zoe':1225, 'ann':6585}
+for key, value in phonebook.items():
+    print(key, value)
