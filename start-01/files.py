@@ -20,7 +20,7 @@ f.close()
 # 读写文件
 # w 写入模式
 f = open('../file/test-file.txt', 'w')
-f.write('abc line\ndef line\nthird xyz\n')
+f.write('abc \ndef \nthird \n')
 f.close()
 # r 只读模式
 f = open('../file/test-file.txt', 'r')
@@ -34,8 +34,27 @@ f = open('../file/test-file.txt', 'r')
 l = f.readlines()
 print(l)
 
-lines = ['1', '2', '3']
-f.writelines(lines)
-for line in f.readlines():
-    print(line)
-f.close()
+# lines = ['1', '2', '3']
+# f.writelines(lines)
+# for line in f.readlines():
+#     print(line)
+# f.close()
+
+# with 语句块
+# with open('../file/test-file.txt', 'w') as f:
+#     f.write('first \n second \n third')
+
+# with open('../file/test-file.txt', 'r') as f:
+#     for line in f.readlines():
+#         print(line)
+
+def sum_of_words(str):
+    sum = 0
+    for s in str:
+        sum += ord(s) - 96
+    return sum
+
+with open('../file/test-file.txt', 'r') as file:
+    for line in file.readlines():
+        if sum_of_words(line) == 6:
+            print(line)
