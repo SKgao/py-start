@@ -43,19 +43,19 @@ a_list = list(a_range)
 say_hi(*a_list) #  传入 list
 
 # 参数预设值
-def say_hi(greeting, *names, capitalized=True):
+def say_hello(greeting, *names, capitalized=True):
     for n in names:
         if capitalized:
             n = n.capitalize()
         print(f'{greeting}, {n}')
 a_list = ['Gs_1', 'gs_2', 'gS_3']
-say_hi('Hello', *a_list)
+say_hello('Hello', *a_list)
 
 # 接收一系列值的关键字参数
-def say_hi(**greeting_names):
+def say_greeting(**greeting_names):
     for names, greeting in greeting_names.items():
         print(f'{greeting}, {names}~')
-say_hi(mike="hello", john="hi")
+say_greeting(mike="hello", john="hi")
 
 a_dictionary = {'mike': 'hello', 'john': 'hi'}
-say_hi(**a_dictionary)
+say_greeting(**a_dictionary)
