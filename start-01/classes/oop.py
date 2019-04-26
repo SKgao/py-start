@@ -74,6 +74,7 @@ class Child(Father, Mother):
         Father.__init__(self, house)
         Mother.__init__(self, sister)
         self.age = age
+        Child.attrtest = 'exist'
 
 bob = Child('PuDong', 'sun', 7)
 print(bob.getHouse())
@@ -81,7 +82,18 @@ print(bob.myFather(), bob.myMother(), bob.getSister())
 bob.setHouse('WuHan')
 print(bob.getHouse(), bob.age)
 # mro列表就是一个简单的所有基类的线性顺序列表(相当于原型链)
-print(Child.__mro__)
+print('mro---->', Child.__mro__)
+# 查看类上的所有方法 接口
+help(Child)
+print('dict--->', Child.__dict__)
+print('dir---->', dir(Child))
+
+# hasattr, getattr, setattr
+print(hasattr(Child, 'getHouse'))
+print(getattr(Child, 'attrtest'))
+print(setattr(Child, 'attrtest', 'not exist!'))
+print(getattr(Child, 'attrtest'))
+
 
 # 多态
 # 多态性是指具有不同功能的函数可以使用相同的函数名，这样就可以用一个函数名调用不同内容的函数。
@@ -107,3 +119,45 @@ cat = Cat('ccc')
 Animal.runAnimal(dog)
 Animal.runAnimal(cat)
 print(dog.name, cat.name)
+
+# 处理时间库
+import datetime
+import time
+print('now', time.time())
+print('year', datetime.date.today().year)
+
+class Golem:
+    __population = 0
+    __life_span = 10
+
+    def __init__(self, name=None):
+        self.name = name
+        self.built_year = datetime.date.today().year
+        self.__active = True
+        Golem.__population += 1
+
+    def say_hi(self):
+        print('Hi!')
+
+    def cease(self):
+        self.__active = False
+        Golem.__population -= 1
+
+    def is_active(self):
+        if datetime.date.today().year - self.built_year >= Golem.__life_span:
+            self.cease
+        return self.__active
+
+    @property
+    def population(self):
+        return Golem.__population
+
+    @population.setter
+    def population(self, value):
+        Golem.__population = value
+
+g = Golem('Clay')
+print(g.population)
+g.population = 100
+print(g.population)
+print(g.is_active())
