@@ -1,0 +1,6 @@
+记录logit调用记录：
+logfunc was called
+logfunc was called
+logfunc was called
+logfunc was called
+logfunc was called

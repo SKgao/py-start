@@ -18,10 +18,12 @@ def do_nothing():
 if not do_nothing():
     print('no return')
 
+
 # 传参函数
 def is_leap(year):
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 print(is_leap(2000))
+
 
 # 可以接受一系列参数 *
 def say_hi(*names):
@@ -42,6 +44,7 @@ say_hi(*a_range) # 传入 range
 a_list = list(a_range)
 say_hi(*a_list) #  传入 list
 
+
 # 参数预设值
 def say_hello(greeting, *names, capitalized=True):
     for n in names:
@@ -51,6 +54,7 @@ def say_hello(greeting, *names, capitalized=True):
 a_list = ['Gs_1', 'gs_2', 'gS_3']
 say_hello('Hello', *a_list)
 
+
 # 接收一系列值的关键字参数
 def say_greeting(**greeting_names):
     for names, greeting in greeting_names.items():
@@ -59,3 +63,7 @@ say_greeting(mike="hello", john="hi")
 
 a_dictionary = {'mike': 'hello', 'john': 'hi'}
 say_greeting(**a_dictionary)
+
+# *args和 **kwargs 适用于函数的参数不确定的时候
+# *args 用来将参数打包成tuple给函数体调用
+# **kwargs 打包关键字参数成dict给函数体调用
