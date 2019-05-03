@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 import random
 
 # 函数重命名
@@ -112,4 +110,3 @@ def max_num(a, b):
     """
     return a if a > b else b
 print(max_num.__doc__, max_num(2, 3))
-

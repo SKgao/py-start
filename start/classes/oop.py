@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = 'all'
 
 # 定义类 class关键字
 class One(object):  # object 代表所有类的基类，也叫作超类

@@ -7,8 +7,6 @@
 # 不可变容器：字符串、range()、元组、Frozen Set
 # 集合Set 分为Set与Frozen Set，另集合中无重复元素
 
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = 'all'
 import random
 
 ######################################################################

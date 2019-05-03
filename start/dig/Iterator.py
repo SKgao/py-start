@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-from  IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = 'all'
-
 ################## Iterator 迭代器 ##################
 
 # Python 中所有可迭代元素，都有Iterator。 如所有的容器

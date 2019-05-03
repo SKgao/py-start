@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 import sys
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = 'all'
 
 # print 函数各个参数
 # sep=' '：接收多个参数之后，输出时，分隔符号默认为空格，' '；

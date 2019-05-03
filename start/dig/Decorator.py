@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-from  IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = 'all'
-
 ################## Decorator 装饰器 ##################
 
 # 装饰器操作符 @
@@ -100,7 +97,7 @@ from functools import wraps
 # wraps，可用作一个装饰器，简化调用update_wrapper的过程；
 
 class logit(object):
-    def __init__(self, logfile='../../file/logout.txt'):
+    def __init__(self, logfile='./../file/logout.txt'):
         self.logfile = logfile
 
     def __call__(self, func):
