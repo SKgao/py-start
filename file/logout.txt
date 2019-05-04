@@ -4,3 +4,5 @@ logfunc was called
 logfunc was called
 logfunc was called
 logfunc was called
+logfunc was called
+logfunc was called
