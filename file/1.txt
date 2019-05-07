@@ -1,0 +1,1 @@
+sudo ln -s /Library/Python/3.7/lib/python/site-packages/django/bin/django-admin  /usr/local/bin
